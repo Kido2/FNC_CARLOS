@@ -54,9 +54,9 @@ def Tseitin(A, letrasProposicionalesA):
     Pila=[]#Iniciar una pila
     I=-1#Contador de variables nuevas
     S=A[0]#Simbolo de trabajo
-    Atomos=letrasProposicionalesA+etrasProposicionalesB
+    Atomos=letrasProposicionalesA+letrasProposicionalesB
     while len(A)>0:
-        if S in Atomos and len(Pila)>0:
+        if S in Atomos and len(Pila)>0 and Pila[-1]=='-':
             I+=1
             Atomo =letrasProposicionalesB[I]
             Pila=Pila[:-1]
